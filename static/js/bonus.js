@@ -8,6 +8,8 @@
 
 
 
+// everything under here is pasted from https://plot.ly/javascript/gauge-charts/ for reference
+
 // Basic Gauge
 var data = [{
   domain: {

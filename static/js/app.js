@@ -1,22 +1,27 @@
+// functions were provided. only buildMetadata & buildCharts needed to be completed.
+// initial comments are left intact and readme directions pasted in
+
+
+// @TODO: Complete the following function that builds the metadata panel
 function buildMetadata(sample) {
 
   // Use `d3.json` to fetch the metadata for a sample
   d3.json(`/metadata/${sample}`).then( (data) => {
 
     // Use d3 to select the panel with id of `#sample-metadata`
-    var PANEL = d3.select("#sample-metadata");
+    var panel = d3.select("#sample-metadata");
 
     // Use `.html("") to clear any existing metadata
-    PANEL.html("");
+    panel.html("");
 
     // Use `Object.entries` to add each key and value pair to the panel
     Object.entries(data).forEach( ([key, value]) => {
 
     // Hint: Inside the loop, you will need to use d3 to append new
     // tags for each key-value in the metadata.
-      PANEL.append("h6").text(`${key}: ${value}`);
+      panel.append("h6").text(`${key}: ${value}`);
     });
-
+    // ---------- this line is left commented out since I did not complete it.
     // BONUS: Build the Gauge Chart
 //     buildGauge(data.WFREQ);
   });
@@ -74,6 +79,8 @@ function buildCharts(sample) {
   });
 }
 
+
+// ---- everything under here was provided.
 
 function init() {
   // Grab a reference to the dropdown select element

@@ -1,3 +1,5 @@
+## all of this was provided along with 2 sqlite .db's (belly_button_biodiversity & bellybutton, 860KB & 840KB), index.html
+
 import os
 
 import pandas as pd
